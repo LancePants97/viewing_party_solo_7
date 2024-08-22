@@ -45,8 +45,6 @@ gem "bootsnap", require: false
 gem "bootstrap" 
 gem "faker"
 
-
-
 # Use Sass to process CSS
 gem "sassc-rails"
 
@@ -70,10 +68,13 @@ group :development do
   # gem "spring"
   gem "rubocop-rails"
 end
+gem "faraday"
 
 group :test do
   gem "rspec-rails"
   gem "capybara"
   gem "launchy"
   gem "simplecov"
+  gem "webmock"
+  gem "vcr"
 end

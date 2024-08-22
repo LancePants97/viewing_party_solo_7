@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/search/movie??&api_key=<MOVIES_API_KEY>&language=en-US&page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.10.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 22 Aug 2024 16:46:49 GMT
+      Server:
+      - openresty
+      Cache-Control:
+      - public, max-age=3944
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 0b5947bc31aeddd8f20b6f446a3fa89e
+      X-Memc-Age:
+      - '20541'
+      X-Memc-Expires:
+      - '3944'
+      Etag:
+      - W/"0e23279b004381f72a34159d5c7dfd1f"
+      Vary:
+      - Accept-Encoding,accept-encoding
+      - Origin
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 a3cc1cfce2f0f18de36e3834e18556b8.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - JFK52-P1
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - kideYpb_MOZSgEv6xWFBvsgkh56d3OHBpS79KzmFOhhSFTuXChZfDg==
+      Age:
+      - '216'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"page":1,"results":[],"total_pages":1,"total_results":0}'
+  recorded_at: Thu, 22 Aug 2024 16:50:25 GMT
+recorded_with: VCR 6.3.1
