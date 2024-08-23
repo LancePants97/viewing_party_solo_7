@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   get "/users/:id/top_rated_movies", to: "top_rated_movies#index"
   get "/users/:id/movies", to: "movies#index"
+  get "/users/:id/movies/:movie_id", to: "movies#show"
 
   resources :users, only: [:show, :create] do
   end

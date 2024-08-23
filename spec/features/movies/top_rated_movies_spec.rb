@@ -13,6 +13,7 @@ RSpec.describe 'Search by Title', type: :feature do
   
     VCR.use_cassette("top_rated_movies") do  
       click_link("Discover Top Rated Movies")
+      expect(current_path).to eq "/users/#{@user1.id}/top_rated_movies"
       expect(page.status_code).to eq 200
       
       within(first(".movie")) do
