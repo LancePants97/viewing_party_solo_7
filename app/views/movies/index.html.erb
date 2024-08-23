@@ -1,0 +1,9 @@
+<h1>Search Results</h1>
+<% @movies.each do |movie| %>
+  <ul class="movie">
+  <li class="title"><%= link_to "#{movie[:title]}", "users/#{@user.id}/movies/#{movie[:id]}" %></li>
+  <li class="vote_average"><%= "Vote Average: #{movie[:vote_average]}" %></li>
+  </ul>
+<% end %>
+
+<li><%= link_to "Discover", "users/#{@user.id}/discover", method: :get %></li>

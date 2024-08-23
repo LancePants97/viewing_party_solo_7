@@ -12,6 +12,5 @@ class TopRatedMoviesController < ApplicationController
 
     json = JSON.parse(response.body, symbolize_names: true)
     @top_movies = json[:results]
-    # binding.pry
   end
 end

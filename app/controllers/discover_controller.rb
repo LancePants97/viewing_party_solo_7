@@ -1,6 +1,6 @@
 class DiscoverController < ApplicationController
   def index
-    keyword = params[:search]
+    keyword = params[:search_keywords]
     @user = User.find(params[:id])
 
     conn = Faraday.new(url: "https://api.themoviedb.org") do |faraday|
@@ -11,6 +11,5 @@ class DiscoverController < ApplicationController
 
     json = JSON.parse(response.body, symbolize_names: true)
     @movies = json[:results]
-    # binding.pry
   end
 end
