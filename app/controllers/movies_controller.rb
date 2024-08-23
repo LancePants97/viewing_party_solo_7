@@ -1,6 +1,5 @@
-class DiscoverController < ApplicationController
+class MoviesController < ApplicationController
   def index
-    # binding.pry
     keyword = params[:search_keywords]
     @user = User.find(params[:id])
 
@@ -8,10 +7,10 @@ class DiscoverController < ApplicationController
       faraday.params[:api_key] = Rails.application.credentials.tmdb[:key]
     end
 
-    response = conn.get("/3/search/movie?#{keyword}?&language=en-US&page=1")
+    response = conn.get("/3/search/movie?query=#{keyword}?&language=en-US&page=1")
 
     json = JSON.parse(response.body, symbolize_names: true)
-    @movies = json[:results]
-    # binding.pry
+    movies = json[:results]
+    @movie = movies.first
   end
 end

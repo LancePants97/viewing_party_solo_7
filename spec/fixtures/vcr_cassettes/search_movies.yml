@@ -1,0 +1,129 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/search/movie??&api_key=<MOVIES_API_KEY>&language=en-US&page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.10.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - openresty
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 0b5947bc31aeddd8f20b6f446a3fa89e
+      X-Memc-Age:
+      - '20541'
+      X-Memc-Expires:
+      - '3944'
+      Date:
+      - Fri, 23 Aug 2024 15:21:38 GMT
+      Cache-Control:
+      - public, max-age=23931
+      Etag:
+      - W/"0e23279b004381f72a34159d5c7dfd1f"
+      Vary:
+      - Origin
+      - accept-encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 9072caf3ec2d91f3dd159b88ae86e822.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - JFK52-P1
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - VQNjzc-gokOEvkH9d1jKez2HzeAFA_fJQlQUqEsgSptYmdsOYvPKCQ==
+      Age:
+      - '131'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"page":1,"results":[],"total_pages":1,"total_results":0}'
+  recorded_at: Fri, 23 Aug 2024 15:23:49 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/search/movie?api_key=<MOVIES_API_KEY>&language=en-US&page=1&query=Shawshank%20Redemption?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.10.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 23 Aug 2024 15:23:50 GMT
+      Server:
+      - openresty
+      Cache-Control:
+      - public, max-age=23551
+      X-Memc:
+      - MISS, STORE
+      X-Memc-Key:
+      - 11ab08beeddb742e571e72da5c4bcbd4
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '23551'
+      Etag:
+      - W/"1f870d608fbb6f884ca5c0746dc517fd"
+      Vary:
+      - Accept-Encoding,accept-encoding
+      - Origin
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 a4edf08fb593b7ca4fee9a64018a186e.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - JFK52-P1
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - MngkORXQgbnrbgj7TPlSeOfQ-cAW23Ay0uDwamQX9LJnJ4zXvU3WIw==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"page":1,"results":[{"adult":false,"backdrop_path":"/avedvodAZUcwqevBfm8p4G2NziQ.jpg","genre_ids":[18,80],"id":278,"original_language":"en","original_title":"The
+        Shawshank Redemption","overview":"Imprisoned in the 1940s for the double murder
+        of his wife and her lover, upstanding banker Andy Dufresne begins a new life
+        at the Shawshank prison, where he puts his accounting skills to work for an
+        amoral warden. During his long stretch in prison, Dufresne comes to be admired
+        by the other inmates -- including an older prisoner named Red -- for his integrity
+        and unquenchable sense of hope.","popularity":133.56,"poster_path":"/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg","release_date":"1994-09-23","title":"The
+        Shawshank Redemption","video":false,"vote_average":8.705,"vote_count":26669},{"adult":false,"backdrop_path":null,"genre_ids":[],"id":897459,"original_language":"en","original_title":"Hope
+        Springs Eternal: A Look Back at The Shawshank Redemption","overview":"Documentary
+        about the movie.","popularity":1.873,"poster_path":"/v4wcS8XwUn5zl57rYRMzMnKahmt.jpg","release_date":"2004-06-25","title":"Hope
+        Springs Eternal: A Look Back at The Shawshank Redemption","video":false,"vote_average":7.4,"vote_count":5}],"total_pages":1,"total_results":2}'
+  recorded_at: Fri, 23 Aug 2024 15:23:50 GMT
+recorded_with: VCR 6.3.1
